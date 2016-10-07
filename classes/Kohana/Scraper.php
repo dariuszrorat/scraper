@@ -4,6 +4,13 @@ defined('SYSPATH') OR die('No direct access allowed.');
 
 include Kohana::find_file('vendor', 'simplehtmldom/simple_html_dom');
 
+/**
+ * @package    Kohana/Scraper
+ * @author     Dariusz Rorat
+ * @copyright  (c) 2016 Dariusz Rorat
+ * @license    BSD
+ */
+
 class Kohana_Scraper
 {
     const FROM_FILE = 10;
