@@ -65,7 +65,10 @@ class Kohana_Scraper
             {
                 if (Kohana::$profiling)
                 {
-                    $benchmark = Profiler::start("Scraper", substr($this->_input, 0, 200));
+                    $subject = strlen($this->_input) > 200
+                        ? substr($this->_input, 0, 200) . '...'
+                        : $this->_input;
+                    $benchmark = Profiler::start("Scraper", $subject);
                 }
                 try
                 {
